@@ -1,0 +1,27 @@
+PROCEDURE produitscalaire (a,b : array_name : ARRAY_OF INTEGER[],VAR C : INTEGER)
+VAR
+    
+BEGIN
+    FOR i FROM 1 TO b .length STEP 1  DO
+        c := c + a[i]*b[i]
+    END_FOR 
+    END
+   ALGORITHM principale    
+    VAR
+          t :  ARRAY_OF INTEGER[] :=[0,1]
+          v :  ARRAY_OF INTEGER[] :=[1.0]
+          result :=INTEGER
+    BEGIN
+        IF (t.length<> v.length) THEN
+            write("errors")
+            
+         ELSE
+            produitscalaire(t,v,result)
+            IF (result =0) THEN
+                write("orth")
+            ELSE
+                write("not orth")
+            END_IF
+            END_IF
+        END_IF
+    END

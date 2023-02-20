@@ -1,0 +1,35 @@
+ALGORITHM prob1 
+
+VAR
+    t :  ARRAY_OF INTEGER[] :=[3,1,7,9]
+    v :  ARRAY_OF INTEGER[] :=[2,4,1,9,3]
+    verif :BOOLEAN := false;
+    sum : INTEGER := 0;
+BEGIN
+    FOR i FROM 1 TO t.length STEP 1  DO
+        verif :=false ;
+        FOR j FROM 1 TO v.length STEP 1  DO
+            IF (t[i]= v[j]) THEN
+                verif := true;
+            END_IF
+            END_FOR
+            IF (verif = false) THEN
+               sum := sum +t[i] 
+            END_IF
+
+         END_FOR
+          FOR i FROM 1 TO v.length STEP 1  DO
+        verif :=false ;
+        FOR j FROM 1 TO t.length STEP 1  DO
+            IF (v[i]= t[j]) THEN
+                verif := true;
+            END_IF
+            END_FOR
+            IF (verif = false) THEN
+               sum := sum +v[i] 
+               END_IF
+               END_FOR
+               write( "la somme est",sum)
+
+         
+END
